@@ -1,19 +1,15 @@
 import React from 'react';
-import {View, Text, StyleSheet, useColorScheme} from 'react-native';
-import NewComponent from './NewComponent';
+import {Text, View, StyleSheet, useColorScheme} from 'react-native';
 
-const App = (): JSX.Element => {
+function NewComponent() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <View style={styles.container}>
-      <Text style={isDarkMode ? styles.darkMode : styles.lightMode}>
-        Hello There. I am a Mobile Application now.
-      </Text>
-      <NewComponent />
+      <Text style={isDarkMode ? styles.darkMode : styles.lightMode}>Bleh</Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -29,4 +25,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default NewComponent;
