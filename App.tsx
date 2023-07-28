@@ -8,6 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 import Flatcard from './components/Flatcard';
+import ImgCard from './components/ImgCard';
 
 const App = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -20,6 +21,7 @@ const App = (): JSX.Element => {
             Hello There.
           </Text>
           <Flatcard />
+          <ImgCard />
         </View>
       </ScrollView>
     </SafeAreaView>
