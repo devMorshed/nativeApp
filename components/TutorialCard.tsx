@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#353542',
     borderRadius: 8,
-    margin: 16,
     position: 'relative',
   },
   tutorial_image: {
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
     right: 10,
     padding: 6,
     backgroundColor: '#424242',
-    borderRadius: 20, 
+    borderRadius: 20,
   },
 
   card_title: {
