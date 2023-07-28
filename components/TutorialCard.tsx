@@ -4,8 +4,11 @@ import React from 'react';
 export default function TutorialCard({tutorialImage}) {
   return (
     <View style={styles.card}>
-      
       <Image style={{width: '100%'}} source={tutorialImage} />
+      <View style={styles.card_save}>
+        {/* <Text>Hello</Text> */}
+        <Image source={require('../assets/Icons/bookmark.png')} />
+      </View>
 
       <View style={styles.card_footer}>
         <View>
@@ -29,10 +32,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#353542',
     borderRadius: 8,
     margin: 16,
+    position: 'relative',
   },
   tutorial_image: {
     display: 'flex',
     alignItems: 'center',
+  },
+  card_save: {
+    position: 'absolute',
+    height: 32,
+    width: 32,
+    top: 10,
+    right: 10,
+    padding: 6,
+    backgroundColor: '#424242',
+    borderRadius: 20, 
   },
 
   card_title: {
