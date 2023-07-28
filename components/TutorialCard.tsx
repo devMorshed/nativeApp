@@ -1,10 +1,11 @@
 import {Button, Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-export default function ImgCard() {
+export default function TutorialCard({tutorialImage}) {
   return (
     <View style={styles.card}>
-      <Image source={require('../assets/images/workout.png')} />
+      
+      <Image style={{width: '100%'}} source={tutorialImage} />
 
       <View style={styles.card_footer}>
         <View>
@@ -27,7 +28,13 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#353542',
     borderRadius: 8,
+    margin: 16,
   },
+  tutorial_image: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+
   card_title: {
     fontSize: 16,
     lineHeight: 20,

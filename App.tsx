@@ -7,8 +7,8 @@ import {
   SafeAreaView,
   ScrollView,
 } from 'react-native';
-import Flatcard from './components/Flatcard';
-import ImgCard from './components/ImgCard';
+
+import TutorialCard from './components/TutorialCard';
 
 const App = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -17,11 +17,14 @@ const App = (): JSX.Element => {
     <SafeAreaView>
       <ScrollView>
         <View style={styles.container}>
-          <Text style={isDarkMode ? styles.darkMode : styles.lightMode}>
-            Hello There.
-          </Text>
-          <Flatcard />
-          <ImgCard />
+          <View style={styles.tutorial_grid}>
+            <TutorialCard
+              tutorialImage={require('./assets/images/workout.png')}
+            />
+            <TutorialCard
+              tutorialImage={require('./assets/images/workout2.png')}
+            />
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -30,15 +33,19 @@ const App = (): JSX.Element => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#1C1C23',
+    minHeight: 800,
   },
   lightMode: {
     color: 'black',
   },
   darkMode: {
     color: 'white',
+  },
+  tutorial_grid: {
+    display: 'flex',
+    gap: 5,
+    marginVertical: 10,
   },
 });
 
