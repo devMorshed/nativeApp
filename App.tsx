@@ -3,7 +3,6 @@ import {
   View,
   Text,
   StyleSheet,
-  useColorScheme,
   SafeAreaView,
   ScrollView,
   TextInput,
@@ -13,8 +12,6 @@ import {
 import TutorialCard from './components/TutorialCard';
 
 const App = (): JSX.Element => {
-  const isDarkMode = useColorScheme() === 'dark';
-
   const [searchText, setSearchText] = React.useState('');
 
   return (
@@ -92,21 +89,13 @@ const App = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#1C1C23',
-    // minHeight: 765,
     padding: 16,
   },
-  lightMode: {
-    color: 'black',
-  },
-  darkMode: {
-    color: 'white',
-  },
-
   greetings: {
     fontSize: 32,
     lineHeight: 40,
     fontWeight: '600',
-    marginVertical: 24,
+    marginTop: 24,
     color: '#efefef',
   },
   reminder: {
@@ -120,7 +109,6 @@ const styles = StyleSheet.create({
     marginVertical: 24,
     borderRadius: 10,
   },
-
   reminderTitle: {
     fontSize: 16,
     lineHeight: 24,
@@ -144,9 +132,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
   },
-
   search_bar: {},
-
   search_input: {
     backgroundColor: '#fff',
     paddingVertical: 10,

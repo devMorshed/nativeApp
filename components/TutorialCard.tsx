@@ -1,12 +1,12 @@
 import {Button, Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-export default function TutorialCard({tutorialImage}) {
+export default function TutorialCard({tutorialImage}: {tutorialImage: {}}) {
   return (
     <View style={styles.card}>
-      <Image style={{width: '100%'}} source={tutorialImage} />
+      <Image style={styles.tutorialImage} source={tutorialImage} />
+
       <View style={styles.card_save}>
-        {/* <Text>Hello</Text> */}
         <Image source={require('../assets/Icons/bookmark.png')} />
       </View>
 
@@ -23,6 +23,7 @@ export default function TutorialCard({tutorialImage}) {
           <Text style={styles.card_btn}>Start</Text>
         </View>
       </View>
+      
     </View>
   );
 }
@@ -33,9 +34,10 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     position: 'relative',
   },
-  tutorial_image: {
-    display: 'flex',
-    alignItems: 'center',
+  tutorialImage: {
+    width: '100%',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
   },
   card_save: {
     position: 'absolute',
