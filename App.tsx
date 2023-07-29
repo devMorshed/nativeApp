@@ -25,6 +25,22 @@ const App = (): JSX.Element => {
           <View>
             <Text style={styles.greetings}>Good Morning</Text>
           </View>
+
+          {/* Reminder */}
+          <View style={styles.reminder}>
+            <View>
+              <Text style={styles.reminderTitle}>
+                You have to work the arm.
+              </Text>
+              <Text style={styles.reminderSubtitle}>
+                Do you want to continue the program?
+              </Text>
+            </View>
+            <View>
+              <Text style={styles.reminderBtn}>Continue</Text>
+            </View>
+          </View>
+
           {/* Search Bar */}
           <View style={styles.search_bar}>
             <TextInput
@@ -90,8 +106,43 @@ const styles = StyleSheet.create({
     fontSize: 32,
     lineHeight: 40,
     fontWeight: '600',
-    paddingVertical: 24,
+    marginVertical: 24,
     color: '#efefef',
+  },
+  reminder: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    backgroundColor: '#E23E57',
+    paddingHorizontal: 12,
+    paddingVertical: 20,
+    marginVertical: 24,
+    borderRadius: 10,
+  },
+
+  reminderTitle: {
+    fontSize: 16,
+    lineHeight: 24,
+    fontWeight: '600',
+    color: '#fff',
+  },
+  reminderSubtitle: {
+    fontSize: 12,
+    lineHeight: 16,
+    fontWeight: '400',
+    color: '#ffeeee',
+  },
+  reminderBtn: {
+    fontSize: 14,
+    lineHeight: 16,
+    fontWeight: '600',
+    backgroundColor: '#FFFFFF',
+    textAlign: 'center',
+    color: '#C94040',
+    padding: 12,
+    borderRadius: 20,
+    alignItems: 'center',
   },
 
   search_bar: {},
