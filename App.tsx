@@ -15,7 +15,7 @@ import TutorialCard from './components/TutorialCard';
 const App = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const [searchText, setSearchText] = React.useState('Search');
+  const [searchText, setSearchText] = React.useState('');
 
   return (
     <SafeAreaView>
@@ -30,6 +30,7 @@ const App = (): JSX.Element => {
               value={searchText}
               inlineImageLeft="search"
               inlineImagePadding={40}
+              placeholder="Search"
             />
           </View>
 
@@ -68,7 +69,8 @@ const styles = StyleSheet.create({
 
   search_input: {
     backgroundColor: '#fff',
-    padding: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
     borderRadius: 12,
   },
   tutorial_grid: {
